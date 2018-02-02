@@ -14,7 +14,7 @@ import { AuthTokenService } from '../../authtoken.service';
 })
 export class LoginComponent {
   user: User = new User(0, '', '', '');
-  imgSrc = "assets/images/eye-off.png";
+  imgSrc = "/assets/images/eye-off.png";
   passtype = 'password';
   notPass = false;
   constructor(
@@ -45,11 +45,11 @@ export class LoginComponent {
     /* this.imgSrc = (this.imgSrc === '/assets/images/eye_open.png'? 
     '/assets/images/eye-off.png' : '/assets/images/eye_open.png'); */
     if(!this.notPass){
-      this.imgSrc = 'assets/images/eye-off.png';
+      this.imgSrc = '/assets/images/eye-off.png';
       this.passtype = 'password';
       this.notPass = true;
     }else{
-      this.imgSrc = 'assets/images/eye_open.png';
+      this.imgSrc = '/assets/images/eye_open.png';
       this.passtype = 'text';
       this.notPass = false;
     }

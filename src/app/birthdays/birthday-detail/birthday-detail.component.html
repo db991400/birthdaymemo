@@ -2,7 +2,7 @@
   <!-- 上传照片表单 -->
   <div class="photo-div" (mouseenter)="showAddImage()" (mouseleave)="hideAddImage()">
     <img [src]="selectImg" alt="photo" class="photo-img" *ngIf="showSelectImg" class="person-img">
-    <img src="assets/images/add-person.jpg" alt="add-person" class="add-person" [style.display]="showAddImg? 'block':'none'">
+    <img src="/assets/images/add-person.jpg" alt="add-person" class="add-person" [style.display]="showAddImg? 'block':'none'">
     <input type="file" #updateImg accept="image/jpeg,image/gif,image.png,image/jpg" (change)="getImage($event)" [uploader]="uploader"
       ng2FileSelect>
   </div>
@@ -42,7 +42,7 @@
       <div class="input-group">
         <input type="text" class="form-control" placeholder="年-月-日" id="fbirth" name="fbirth" ngbDatepicker #d="ngbDatepicker" formControlName="fbirthday"
           required readonly="readonly" [(ngModel)]="mbirthday">
-        <img src="assets/images/calendar.svg" (click)="d.toggle()" alt="calendar" class="calendar-img">
+        <img src="/assets/images/calendar.svg" (click)="d.toggle()" alt="calendar" class="calendar-img">
       </div>
       <div *ngIf="fbirthday.invalid && (fbirthday.dirty || fbirthday.touched)" class="alert alert-danger">
         <div *ngIf="fbirthday.errors.required">

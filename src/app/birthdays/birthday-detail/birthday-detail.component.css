@@ -18,7 +18,7 @@
     border: solid 2px #ccc;
     width: 200px;
     height: 200px;
-    background-image: url(/assets/images/personal.png) no-repeat;
+    background: url(/assets/images/personal.png) no-repeat;
 }
 .photo-div input{
     position: absolute;
