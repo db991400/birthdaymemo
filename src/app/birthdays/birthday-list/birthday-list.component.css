@@ -1,0 +1,88 @@
+/* .media-list{
+    margin: 20px 0 0 40px;
+} */
+.div-add{
+    text-align: right;
+    margin-bottom: 10px;
+    color: #eee;
+    margin-right: 20px;
+}
+
+.btn-info{
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0.5px 1px #50e5fd;
+}
+.div-opera{
+    display: inline-block;
+    margin-left: 30px;
+}
+.div-opera .btn{
+    border-radius: 20px;
+    width: 60px;
+    cursor: pointer;
+}
+.div-opera .btn .btn-success{
+    box-shadow: 0px 0px 0.5px 1px #28a745;
+}
+.div-opera .btn .btn-danger{
+    box-shadow: 0px 0px 0.5px 1px #dc3545;
+}
+.birthday-list{
+    text-align: left;
+    padding: 5px;
+}
+.birthday-list .media{
+    border-top: 1px solid #ccc;
+    padding: 15px; 
+
+}
+.birthday-list .media .media-body{
+    color: #eee;
+}
+.birthday-list .media img{
+    width: 128px;
+    height: 128px;
+}
+.birthday-list .media .media-body h5{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+}
+.media-p{
+    margin-top: 15px;
+}
+.birthday-list .media .media-body .head{
+    display: inline-block;
+    font-style: normal;
+    width: 140px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.birthday-list .media .media-body .name{
+    display: inline-block;
+    width: 100px;
+}
+.birthday-list .media .media-body p{
+    margin-bottom: 0.3rem;
+    font-style: italic;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .media img{
+        width: 128px;
+        height: 128px;
+    }
+  }

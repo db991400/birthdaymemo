@@ -1,0 +1,31 @@
+
+.div-login{
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #eee;
+}
+
+.div-login .form-btn{
+    text-align: center;
+}
+
+.div-login .form-btn button{
+    margin: 5px;
+}
+/* .ng-valid[required], .ng-valid.required{
+    border-bottom: 5px solid #42A948;
+} */
+.ng-invalid:not(form){
+    border: 2px solid #f00;
+}
+.input-group img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+    right: 10px;
+    margin-top: 3px;
+    cursor: pointer;
+}

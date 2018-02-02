@@ -1,0 +1,69 @@
+<div class="div-regist">
+  <form [formGroup]="registForm" (ngSubmit)="onSubmit()" novalidate>
+    <!--novalidate阻止浏览器使用原生HTML表单验证-->
+    <div class="form-group">
+      <label for="name">User name</label>
+      <input class="form-control" formControlName="name" id="name" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+          Name is required!
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="name.errors.pattern">
+          <!--用户名必须由字母、数字、下划线和减号组成 -->
+          Name must be composed of letters, numbers, '_', '-'
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control" formControlName="password" type="password" required id="password" #pass>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+        <div *ngIf="password.errors.required">
+          Password is required!
+        </div>
+        <div *ngIf="password.errors.minlength">
+          Password must be at least 8 characters long.
+        </div>
+        <div *ngIf="password.errors.pattern">
+          <!--密码必须由字母、数字、下划线和减号组成，首字母要求大写 -->
+          Password must be composed of letters, numbers, '_', '-' and Capital letters must be capitalized.
+        </div>
+      </div>
+    </div>
+    <div class="from-group">
+      <label for="repassword">Re Password</label>
+      <input type="password" class="form-control" required id="repassword" (focus)="checkValid()"
+       formControlName="repassword">
+      <div class="alert alert-danger" *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)">
+        <div *ngIf="repassword.errors.required">
+          Re password is required!
+        </div>
+        <div *ngIf="repassword.errors.comparePassword">
+          Re password must equal password!
+        </div>
+      </div>
+    </div>
+    <div class="form-group email-group">
+      <label for="email">Email</label>
+      <input class="form-control" formControlName="email" type="email" id="email">
+      <div *ngIf="email.invalid &&(email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors.pattern">
+          The email address format is incorrect
+        </div>
+      </div>
+    </div>
+    <div class="form-group form-btn">
+      <button type="submit" class="btn btn-primary" [disabled]="registForm.invalid">Submit</button>
+      <button type="button" class="btn btn-light" [disabled]="registForm.pristine" (click)="revert()">Cancel</button>
+    </div>
+  </form>
+  <!-- <p>Form values:{{registForm.value | json}}</p>
+  <p>Form status:{{registForm.status | json}}</p> -->
+  <!-- <p>Name value: {{registForm.get('name').value}}</p>
+  <p>Password value: {{registForm.get('password').value}}</p>
+  <p>Email value: {{registForm.get('email').value}}</p> -->
+  <!-- <button (click)="getPass()">Show pass value</button> -->
+</div>

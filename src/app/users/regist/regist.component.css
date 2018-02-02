@@ -1,0 +1,26 @@
+.div-regist{
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #eee;
+}
+.div-regist .form-btn{
+    text-align: center;
+}
+
+.div-regist .form-btn button{
+    margin-right: 5px;
+}
+/* .ng-valid[required], .ng-valid.required{
+    border-bottom: 5px solid #42A948;
+} */
+.ng-invalid[required]:not(form){
+    border: 2px solid #f00;
+}
+.ng-valid[required], .ng-valid.required  {
+    border-left: 2px solid #42A948; /* green */
+  }
+.email-group{
+    margin-top: 15px;
+}

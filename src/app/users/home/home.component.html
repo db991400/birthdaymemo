@@ -1,0 +1,7 @@
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" name="login" triggers="manual" #login="ngbPopover" placement="left" (mouseenter)="showPopver($event)"
+        (mouseleave)="closePopover($event)" [routerLink]="['login']" ngbPopover="Please login first" role="Login">Login</a>
+      <a class="btn btn-warning btn-lg" #regist="ngbPopover" placement="right" (mouseenter)="showPopver($event)" (mouseleave)="closePopover($event)"
+       [routerLink]="['regist']" name="regist" data-toggle="tooltip" ngbPopover="Please regist a user"  role="regist">Regist</a>
+    </p>

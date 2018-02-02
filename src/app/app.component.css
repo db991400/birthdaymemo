@@ -1,0 +1,14 @@
+.bg {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+.jumbotron{
+    padding-bottom: 0;
+}
+.logout-div{
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    
+}

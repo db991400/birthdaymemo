@@ -1,0 +1,56 @@
+.calendar-img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 999;
+    right: 10px;
+    top: 3px;
+    cursor: pointer;
+}
+.div-friend{
+    max-width: 600px;
+    color: #eee;
+    text-align: left;
+    margin: 0 auto;
+}
+.photo-div{
+    position: relative;
+    border: solid 2px #ccc;
+    width: 200px;
+    height: 200px;
+    background-image: url(/assets/images/personal.png) no-repeat;
+}
+.photo-div input{
+    position: absolute;
+    top:0;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    cursor: pointer;
+}
+.add-person{
+    opacity: 0.8;
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+.person-img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+}
+.ng-invalid[required]:not(form){
+    border: 2px solid #f00;
+}
+.ng-valid[required], .ng-valid.required  {
+    border: 2px solid #42A948; /* green */
+  }
+.form-btn{
+    margin-top: 20px;
+}
+.form-btn button{
+    margin-right: 5px;
+}

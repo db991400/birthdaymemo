@@ -1,0 +1,74 @@
+<div class="div-friend" *ngIf="friend">
+  <!-- 上传照片表单 -->
+  <div class="photo-div" (mouseenter)="showAddImage()" (mouseleave)="hideAddImage()">
+    <img [src]="selectImg" alt="photo" class="photo-img" *ngIf="showSelectImg" class="person-img">
+    <img src="assets/images/add-person.jpg" alt="add-person" class="add-person" [style.display]="showAddImg? 'block':'none'">
+    <input type="file" #updateImg accept="image/jpeg,image/gif,image.png,image/jpg" (change)="getImage($event)" [uploader]="uploader"
+      ng2FileSelect>
+  </div>
+  <form [formGroup]="birthdayForm" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fname">Name:</label>
+      <input type="text" class="form-control" id="fname" name="fname" formControlName="fname" required>
+      <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
+        <div *ngIf="fname.errors.required">
+          Name is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fnumber">Mobile No:</label>
+      <input type="text" class="form-control" id="fnumber" name="fnumber" formControlName="fnumber" required>
+      <div *ngIf="fnumber.invalid && (fnumber.dirty || fnumber.touched)" class="alert alert-danger">
+        <div *ngIf="fnumber.errors.required">
+          Mobile Number is required!
+        </div>
+        <div *ngIf="fnumber.errors.pattern">
+          The phone number be digit and must be 11.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="femail">Email:</label>
+      <input type="email" class="form-control" id="femail" name="femail" formControlName="femail">
+      <div *ngIf="femail.invalid && (femail.dirty || femail.touched)" class="alert alert-danger">
+        <div *ngIf="femail.errors.pattern">
+          The email address format is incorrect!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fbirth">Birthday</label>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="年-月-日" id="fbirth" name="fbirth" ngbDatepicker #d="ngbDatepicker" formControlName="fbirthday"
+          required readonly="readonly" [(ngModel)]="mbirthday">
+        <img src="assets/images/calendar.svg" (click)="d.toggle()" alt="calendar" class="calendar-img">
+      </div>
+      <div *ngIf="fbirthday.invalid && (fbirthday.dirty || fbirthday.touched)" class="alert alert-danger">
+        <div *ngIf="fbirthday.errors.required">
+          Birthday is required!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fgroup">Group</label>
+      <select class="form-control" id="fgroup" formControlName="fgroup">
+        <option>family</option>
+        <option>colleague</option>
+        <option>friend</option>
+      </select>
+      <div *ngIf="fgroup.invalid && (fgroup.dirty || fgroup.touched)" class="alert alert-danger">
+          <div *ngIf="fgroup.errors.required">
+            Group is required!
+          </div>
+        </div>
+    </div>
+    <div class="form-group form-btn">
+      <!--表单无效时，submit按钮不可用
+          表单值未发生变化时，Cancel按钮不可用
+      -->
+      <button type="submit" class="btn btn-primary" [disabled]="birthdayForm.invalid">Submit</button>
+      <button type="button" class="btn btn-light" [disabled]="birthdayForm.pristine" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

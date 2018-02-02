@@ -1,0 +1,28 @@
+<div class="div-friend">
+  <div class="div-add">
+      <button  class="btn btn-info" [routerLink]="[0]">Add Friend</button>
+  </div>
+  <ul class="list-unstyled birthday-list">
+    <li class="media" *ngFor="let friend of friends">
+      <img class="align-self-center mr-3" [src]="friend.photo" alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1"><span class="head">{{friend.fgroup}}: </span><span class="name">{{friend.fname}}</span>
+          <div class="div-opera">
+            <button [routerLink]="[friend.fid]"
+             class="btn btn-sm btn-success">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="delete(friend)">Delete</button>
+          </div> 
+        </h5>
+        <div class="media-p">
+          <p><span class="head">Phone Number: </span>{{friend.fnumber}}
+          </p>
+          <p><span class="head">Email: </span>{{friend.femail}}</p>
+          <p><span class="head">Birthday: </span>{{friend.fbirth | date:"yyyy-MM-dd"}}</p>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</div>
+
+

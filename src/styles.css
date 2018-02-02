@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+    /* background: linear-gradient(rgba(139, 0, 139,1),rgba(139,0,139,0)); */
+    background-color: rgba(139, 0, 139,1);
+}
+
+.jumbotron {
+    margin-top: .5em;
+    background-color: transparent;
+    color: #eee;
+    background-color: transparent;
+}
+
+.content {
+    text-align: left;
+}
+
+.my-4 {
+    background-color: white;
+}
+.display-3{
+    margin-bottom: 1em;
+}
+a {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    min-width: 140px;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+    a {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 2em;
+        min-width: 140px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    a {
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 4em;
+        min-width: 140px;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    a {
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 4em;
+        min-width: 140px;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    a {
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 4em;
+        min-width: 140px;
+    }
+}
