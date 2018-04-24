@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class AuthTokenService{
     setToken(token:string){
         sessionStorage.removeItem('token');
-        if(token){
+        if((token as string).length != 0){
             sessionStorage.token = token;
             console.log('sessionStorage.token: ' + sessionStorage.token);
         }
@@ -16,6 +16,5 @@ export class AuthTokenService{
         }else{
             return null;
         }
-       
     }
 }

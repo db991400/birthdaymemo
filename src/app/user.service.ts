@@ -45,8 +45,10 @@ export class UserService {
     //错误处理
     handleError(err: HttpErrorResponse): string {
         if (err.error instanceof Error) {
+            //客户端发生错误
             return '发生错误，错误信息:' + err.error.message;
         } else {
+            //后端发生的错误
             console.log(`Backend returned code ${err.status}, body was: ${err.error['msg']}`);
             return err.error['msg'];
         }

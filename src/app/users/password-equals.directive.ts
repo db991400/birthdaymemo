@@ -8,8 +8,9 @@ export function passwordEquals(password: string): ValidatorFn {
         return isEquals ? null : { 'comparePassword': control.value };
     }
 }
-
-@Directive({
+/**
+ * 在使用模板驱动型表单时，还需要定义一个控制器
+ * @Directive({
     selector: '[comparePassword]',
     providers: [{ provide: NG_VALIDATORS, useExisting: PasswordEqualsDirective, multi: true }]
 })
@@ -19,4 +20,6 @@ export class PasswordEqualsDirective implements Validator {
         return this.comparePassword ? passwordEquals(this.comparePassword)(control) : null;
     }
 }
+ */
+
 

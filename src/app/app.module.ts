@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { UsersModule } from './users/users.module';
@@ -18,6 +19,7 @@ import { BirthdaysModule } from './birthdays/birthdays.module';
   imports: [
     BrowserModule,
     UsersModule,
+    HttpClientModule,
     BirthdaysModule,
     NgbModule.forRoot(),
     AppRoutingModule

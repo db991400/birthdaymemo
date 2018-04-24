@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
@@ -11,13 +11,13 @@ import { UsersComponent } from './users/users.component';
 import { UsersRoutingModule } from './users-routing.module';
 import { HomeComponent } from './home/home.component';
 import { RegistComponent } from './regist/regist.component';
-import { PasswordEqualsDirective } from './password-equals.directive';
+// import { PasswordEqualsDirective } from './password-equals.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule,
+    // HttpClientModule,
     ReactiveFormsModule,
     UsersRoutingModule,
     NgbModule
@@ -27,6 +27,6 @@ import { PasswordEqualsDirective } from './password-equals.directive';
     LoginComponent,
     HomeComponent,
     RegistComponent,
-  PasswordEqualsDirective]
+  /* PasswordEqualsDirective */]
 })
 export class UsersModule { }
